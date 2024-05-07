@@ -7,7 +7,7 @@
 
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -91,6 +91,26 @@ figcaption {
     font-size: 1rem; /* Adjust font size */
     margin-top: .5rem; /* Add some space between the image and the caption */
     color: #333; /* Set the color of the caption text */
+}
+
+footer {
+    background: purple;
+    height: 80px;
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+footer .copyright {
+    padding-top: 15px
+}
+
+footer .date {
+    margin-top: -20px;
+    font-size: smaller;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: yellow;
 }
 
 /* Mobile View ***************/
