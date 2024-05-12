@@ -78,6 +78,8 @@ footer .date {
 @media screen and (min-width: 768px) {
     header h1 {
         height: 21vh;
+        border-bottom: 15px solid plum;
+
     }
 
     picture img {
@@ -132,15 +134,16 @@ footer .date {
         background-color: var(--header-color);
         gap: 30px;
         height: 60px;
-        margin: 10px 15px 10px -30px;
+        margin: 10px 15px 10px -35px;
     }
    
-    /* Hide the original weather icon using ::before pseudo-element */
-    .weather-icon::after {
+     /* Hide the original weather icon using ::after pseudo-element */
+     .weather-icon::after {
         content: ""; /* Empty content */
         display: none; /* Hide the pseudo-element */
     }
 
+    /* Hide the original weather icon using ::before pseudo-element */
     .weather-icon::before {
         content: ""; /* Empty content */
         display: none; /* Hide the pseudo-element */
@@ -150,6 +153,7 @@ footer .date {
     .weather-icon:hover::before {
         display: inline-block; /* Display the pseudo-element on hover */
     }
+}
 
     footer {
         margin-top: -24px;
