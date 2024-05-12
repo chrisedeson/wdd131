@@ -136,6 +136,11 @@ footer .date {
     }
    
     /* Hide the original weather icon using ::before pseudo-element */
+    .weather-icon::after {
+        content: ""; /* Empty content */
+        display: none; /* Hide the pseudo-element */
+    }
+
     .weather-icon::before {
         content: ""; /* Empty content */
         display: none; /* Hide the pseudo-element */
