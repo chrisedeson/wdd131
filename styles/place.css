@@ -1,0 +1,166 @@
+:root {
+    --primary-color: slategray;
+    --secondary-color: aliceblue;
+    --header-color: purple;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background-color: var(--secondary-color);
+    /* Font family goes here */
+}
+
+
+header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    background-color: var(--primary-color);
+    border-bottom: 25px solid plum;
+}
+
+
+picture img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.details-1, .details-2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.data-part-A, .data-part-C {
+    text-align: end;
+    font-weight: bold;
+}
+
+.data-part-B, .data-part-D {
+    text-align: left;
+}
+
+.weather-icon img {
+    width: 10vh;
+}
+
+
+footer {
+    background: blueviolet;
+    height: 100px;
+    color: var(--secondary-color);
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+footer .copyright {
+    padding: 1.5rem 1rem 0 1rem;
+}
+
+footer .date {
+    margin-top: -20px;
+    font-size: smaller;
+    color: var(--secondary-color);
+}
+
+
+/* Large screens */
+
+@media screen and (min-width: 768px) {
+    header h1 {
+        height: 21vh;
+    }
+
+    picture img {
+        height: 80vh;
+        width: 100vw;
+    }
+    
+    .city-data {
+        position: absolute;
+        top: 180px;
+        left: 30px;
+        padding: 0 25px 0 50px;
+        background-color: rgb(233, 241, 248, 0.8);
+        
+  }
+
+    .city-data h2 {
+        background-color: var(--header-color);
+        padding: 15px;
+        margin: 10px 10px 10px -60px;
+        font-size: 2rem;
+        text-align: left;
+        color: var(--secondary-color);
+        
+    }
+
+    /* weather icon using ::after pseudo-element */
+    .weather-icon::after {
+        display: block;
+        padding: 50px;
+    }
+
+
+    .weather-data {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding-left: 25px;
+        padding-right: 20px;
+        background-color: rgb(233, 241, 248, 0.8);
+    }
+
+    .weather-data h2 {
+        background-color: var(--header-color);
+        padding-left: 15px;
+        margin-top: 10px;
+        font-size: 2rem;
+        text-align: left;
+        color: var(--secondary-color);
+    }
+
+    .weather-icon img{
+        margin-top: 15px;
+        width: 35px;
+    }
+
+    .weather-data-header {
+        display: flex;
+        background-color: var(--header-color);
+        gap: 30px;
+        height: 60px;
+        margin: 10px 15px 10px -30px;
+    }
+   
+    /* Hide the original weather icon using ::before pseudo-element */
+    .weather-icon::before {
+        content: ""; /* Empty content */
+        display: none; /* Hide the pseudo-element */
+    }
+
+    /* Reveal the original weather icon by removing the ::before pseudo-element */
+    .weather-icon:hover::before {
+        display: inline-block; /* Display the pseudo-element on hover */
+    }
+
+    footer {
+        margin-top: -24px;
+    }
+
+
+
+}
+
