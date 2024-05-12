@@ -27,7 +27,6 @@ header h1 {
     border-bottom: 25px solid plum;
 }
 
-
 picture img {
     max-width: 100%;
     height: auto;
@@ -93,7 +92,6 @@ footer .date {
         left: 30px;
         padding: 0 25px 0 50px;
         background-color: rgb(233, 241, 248, 0.8);
-        
   }
 
     .city-data h2 {
@@ -103,7 +101,6 @@ footer .date {
         font-size: 2rem;
         text-align: left;
         color: var(--secondary-color);
-        
     }
 
     .weather-data {
@@ -153,13 +150,10 @@ footer .date {
     .weather-icon:hover::before {
         display: inline-block; /* Display the pseudo-element on hover */
     }
-}
 
     footer {
         margin-top: -24px;
     }
-
-
 
 }
 
