@@ -12,9 +12,8 @@ body {
     margin: 0;
     text-align: center;
     background-color: var(--secondary-color);
-    /* Font family goes here */
+    font-family: "Sansita", sans-serif;
 }
-
 
 header h1 {
     margin-top: 0;
@@ -34,13 +33,11 @@ picture img {
     height: auto;
 }
 
-
 .details-1, .details-2 {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-
 
 .data-part-A, .data-part-C {
     text-align: end;
@@ -54,7 +51,6 @@ picture img {
 .weather-icon img {
     width: 10vh;
 }
-
 
 footer {
     background: blueviolet;
@@ -76,7 +72,7 @@ footer .date {
 }
 
 
-/* Large screens */
+/* Large Screen View ***************/
 
 @media screen and (min-width: 768px) {
     header h1 {
@@ -106,13 +102,6 @@ footer .date {
         color: var(--secondary-color);
         
     }
-
-    /* weather icon using ::after pseudo-element */
-    .weather-icon::after {
-        display: block;
-        padding: 50px;
-    }
-
 
     .weather-data {
         position: absolute;
