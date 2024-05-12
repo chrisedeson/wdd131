@@ -50,6 +50,7 @@ picture img {
 
 .weather-icon img {
     width: 10vh;
+    margin-bottom: 20px;
 }
 
 footer {
