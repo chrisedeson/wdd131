@@ -1,32 +1,15 @@
 /* This style is used for the larger view */
 /* large view navigation ************************************/
 
-@media (min-width: 37.5em) {
-	h1 {
-		font-size: 2.5rem;
-		margin-left: 0;
-		text-align: center;
-	}
-	
-	h2 {
-		font-size: 2rem;
-		text-align: center;
-	}
+@media (min-width: 600px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-	#menu {
-		display: none; /* hide hamburger button */
-	}
-
-	.nav {
-		flex-direction: row;
-	}
-
-	.nav a {
-		display: block;
-		flex: 1 1 100%;
-	}
-	
-	.stuff {
-		margin: 1rem auto;
-	}
+@media (min-width: 900px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
 }

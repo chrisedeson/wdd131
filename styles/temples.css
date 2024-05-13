@@ -1,100 +1,109 @@
-/* This style is for mobile viewing */
-/* Mobile View ***************/
-
-/* * {
-	box-sizing: border-box;
-} */
-
+* {
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', serif;
 }
 
-header {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    background-color: purple;
-    color: white;
-    height: 100%;
-
-}
-
-h1 {
-	text-align: left;
-	font-size: 1.5rem;
-	margin-left: 1rem;
-}
-
-.navigation {
+.navbar {
     display: flex;
-    text-align: end;
-    justify-content: space-around;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    margin-right: 45px;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
     list-style: none;
 }
 
-nav a {
+.navbar-links li a {
     display: block;
-	padding: 0.5rem 2rem;
-	text-decoration: none;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+}
+
+/* .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+} */
+
+
+main h2 {
     text-align: center;
-    font-weight: 900;
-    font-size: larger;
-    color: #f1ebff;
 }
 
-nav a:hover {
-    background-color: rgba(240, 248, 255, 0.493);
-	color: blue;
-    border-radius: 4px;
-}
-
-h2 {
-	font-size: 1.5rem;
-	color: navy;
-	text-align: center;
-}
-
-.features {
-    display: grid;
-	grid-template-columns: repeat(3, 1fr); /* repeat() function in CSS is a shorthand for repeating patterns, and in this case, repeat(3, 1fr) is equivalent to 1fr 1fr 1fr. */
-	justify-content: center; /* Centers the grid items horizontally within the grid container. */
-	max-width: 930px;
-	margin-inline: auto;  /* same as margin: 0 auto;...centers the element horizontally within its container.*/
-}
-
-img, .image-container {
-    width: 330px;
-	height: 200px;
-	margin-right: -25px;
-	margin-left: -25px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.05);
-    border-radius: 4px;
-}
-
-.image-container {
-    overflow: hidden; /* Ensure the image doesn't overflow its container */
-}
-
-.image-container img {
-    width: 400px; /* Make the image fill the container width */
-    height: 200px; /* Maintain the image's aspect ratio */
-    transition: transform 0.6s ease; /* Apply smooth transition effect */
-}
-
-.image-container img:hover {
-    transform: scale(1.05); /* Zoom in the image on hover */
+.features figure {
+    margin: 0;
+    padding: 12px ;
 }
 
 figcaption {
-    text-align: center; /* Center-align the text */
-    font-size: 1rem; /* Adjust font size */
-    margin-top: .5rem; /* Add some space between the image and the caption */
-    color: #333; /* Set the color of the caption text */
+    text-align: center;
+}
+
+figure img{
+    width: 100%;
+}
+
+.toggle-button::before {
+    content: "☰";
+    font-size: 25px;
+    color: white;
+    margin-top: -10px;
+}
+
+.toggle-button.open::before {
+    content: "❎";
+}
+
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
 footer {
-    background: purple;
+    background: black;
     height: 80px;
     color: aliceblue;
     font-size: 20px;
@@ -113,111 +122,38 @@ footer .date {
     color: yellow;
 }
 
-/* Mobile View ***************/
-/* Media Query for Mobile View */
-@media screen and (min-width: 320px) and (max-width: 767px) {
-    /* Adjust styles for mobile devices here */
 
-    #menu {
-		display: block;
-		font-size: 1.5rem;
-		border: 0;
-		background: none;
-		color: #000;
-		 position: absolute;
-		top: 1rem;
-		right: 1rem;
-	}
-	
-	#menu::before {
-		content: "☰";
-		color: white;
-		font-size: larger;
-	}
-	
-	#menu.open::before {
-		content: "❎";
-	}
-	
-	nav {
-		display: none;
-	}
-	
-	nav {
-		background-color: tomato;
-	}
-	nav {
-		list-style: none;
-		margin: 0 auto;
-		max-width: 760px;
-	}
-	
-	nav li {
-		display: ;
-	}
-	nav a {
-		display: block;
-		padding: 0.75rem;
-		text-align: left;
-		text-decoration: none;
-		color: black;
-		font-weight: 700;
-		transition: 0.5s;
-		font-size: clamp(1rem, 2vmin, 1.5rem);
-	}
-	
-	nav a:hover, nav a:active {
-		color: white;
-		background-color: black;
-	}
-	
-	.show li {
-		display: block;
-	}
-	
-	#menu.show::before {
-		content: "X";
-	}
-	
-	
-	/* when the button is clicked - the open class is toggled (added/removed) */
-	.open a {
-		display: block;
-	}
-	
-	.active::before {
-		content: "📍";  /* just a wayfinding symbol for the user */
-	}
-	
-	body {
-		border: 1px solid rgba(0,0,0,.1);
-		margin: 0 auto;
-		text-align: center;
-	}
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-	.features {
-		display: block;
-		width: 320px;
-	}
+    .toggle-button {
+        display: flex;
+    }
 
-	figcaption {
-		margin: 2 auto;
-		width: 290px;
-		text-align: center;
-		padding-bottom: 20px;
-	}
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
 
-	h1 {
-		font-size: 2em;
-	}
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
 
-	h2 {
-		margin: 3 auto;
-		width: 107%;
-		text-align: center;
-	}
+    .navbar-links ul li {
+        text-align: center;
+    }
 
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
 
-	
-	
+    .navbar-links.active {
+        display: flex;
+    }
 }
+
+
