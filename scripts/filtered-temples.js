@@ -112,7 +112,6 @@ createTempleCard(temples);
 
 const currentyear = new Date().getFullYear();
 
-
 const templesOldLink = document.querySelector("#templesOld");
 const templesNewLink = document.querySelector("#templesNew");
 const templesLargeLink = document.querySelector("#templesLarge");
@@ -139,8 +138,6 @@ templesSmallLink.addEventListener("click", () => {
 templesHome.addEventListener("click", () => {
   createTempleCard(temples);
 });
-
-
 
 
 function createTempleCard(filteredTemples) {
