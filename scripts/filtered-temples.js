@@ -110,7 +110,7 @@ const temples = [
 
 createTempleCard(temples);
 
-const currentYear = new Date().getFullYear();
+const currentyear = new Date().getFullYear();
 
 
 const templesOldLink = document.querySelector("#templesOld");
