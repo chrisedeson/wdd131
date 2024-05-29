@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+main {
+    margin-bottom: 40%;
+}
+
+footer {
+    background: darkblue;
+    height: 80px;
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+footer .copyright {
+    padding-top: 15px
+}
+
+footer .date {
+    margin-top: -20px;
+    font-size: smaller;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: gold;
+}
+
+
+/* LARGE SCREEN */
+
+/* 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 64rem) {
+
+    header, main, footer {
+        max-width: 64rem;
+        margin:auto;
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+    
+    main {
+        margin-bottom: 22%;
+    }
+    
+    
+}
