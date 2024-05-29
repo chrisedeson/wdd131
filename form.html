@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- I added the maximum....TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review Form</title>
     <meta name="description" content="Product review form page using good form design">
     <meta name="author" content="Christopher Edeson">
@@ -21,65 +20,76 @@
     <main>
         
         <form method="get" action="review.html" class="review-form">
-            <fieldset>
-                <label>
+            <fieldset class="main-fieldset">
+                <fieldset class="no-border">
                     <legend>Product Name*</legend>
+                    <label>
+                        
 
-                    <select name="Product" id="product" required>
-                        <option value="">Choose a Product ...</option>
-                        <option value="AcquaSmart">AcquaSmart - Smart Water Bottle</option>
-                        <option value="ThermoSmart">ThermoSmart - Smart Thermos</option>
-                        <option value="FitBand">FitBand - Fitness Tracker</option>
-                        <option value="CleanAir">CleanAir - Smart Air Purifier</option>
-                        <option value="PulseCheck">PulseCheck - Smart Blood Pressure Monitor</option>
-                        <option value="SmoothShave">SmoothShave - Smart Electric Razor</option>
-                        <option value="SilkSkin">SilkSkin - Smart Skincare Device</option>
-                        <option value="TrkMate">Smart Hiking Backpack</option>
+                        <select name="Product" id="product" required>
+                            <option value="">Choose a Product ...</option>
+                            <option value="AcquaSmart">AcquaSmart - Smart Water Bottle</option>
+                            <option value="ThermoSmart">ThermoSmart - Smart Thermos</option>
+                            <option value="FitBand">FitBand - Fitness Tracker</option>
+                            <option value="CleanAir">CleanAir - Smart Air Purifier</option>
+                            <option value="PulseCheck">PulseCheck - Smart Blood Pressure Monitor</option>
+                            <option value="SmoothShave">SmoothShave - Smart Electric Razor</option>
+                            <option value="SilkSkin">SilkSkin - Smart Skincare Device</option>
+                            <option value="TrkMate">Smart Hiking Backpack</option>
 
-                    </select>
-                </label>
+                        </select>
+                    </label>
+                </fieldset>
 
                 <!-- <div>Overall Rating</div>
                     <input type="radio" name="rating" value="1star"> -->
-                <label>
-                    <legend>Overall Rating</legend>
-                    <div class="stars">
-                        <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
-                        <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
-                        <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
-                        <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
-                        <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
-                    </div>
-                </label>
+                <fieldset class="no-border">
+                        <legend>Overall Rating</legend>
+                        <div class="stars">
+                            <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+                            <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
+                            <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
+                            <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
+                            <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+                        </div>
+                </fieldset>
 
-                <label>
+                <fieldset class="no-border">
                     <legend>Date of Installation</legend>
                     <input type="date" name="installationDate" id="installation-date">
-                </label>
+                </fieldset>
 
-                <label>
+                <fieldset class="no-border">
                     <legend>Which feature did you find useful in the products?<br><i>(Check all the apply)</i></legend>
                     <div class="features">
-                        <label><input type="checkbox" id="features-checkbox" name="features-checkbox" value="features-checkbox">Durablility</label>
+                        <!-- <label><input type="checkbox" id="features-checkbox" name="features-checkbox" value="features-checkbox">Durablility</label>
                         <label><input type="checkbox" id="features-checkbox" name="features-checkbox" value="features-checkbox">Ease of Use</label>
                         <label><input type="checkbox" id="features-checkbox" name="features-checkbox" value="features-checkbox">Performance</label>
-                        <label><input type="checkbox" id="features-checkbox" name="features-checkbox" value="features-checkbox">Design</label>
+                        <label><input type="checkbox" id="features-checkbox" name="features-checkbox" value="features-checkbox">Design</label> -->
+
+                        <label><input type="checkbox" id="durability" name="features-checkbox" value="Durability"> Durability</label>
+                        <label><input type="checkbox" id="ease-of-use" name="features-checkbox" value="Ease of Use"> Ease of Use</label>
+                        <label><input type="checkbox" id="performance" name="features-checkbox" value="Performance"> Performance</label>
+                        <label><input type="checkbox" id="design" name="features-checkbox" value="Design"> Design</label>
                     </div>
-                </label>
+                </fieldset>
 
-                <label>
+                <fieldset class="no-border">
                     <legend>Written Review <span class="optional">(Optional)</span></legend>
-                    <label><input type="textarea" id="review" name="written-review"></label>
-                </label>
+                    <!-- <label><input type="textarea" id="review" name="written-review"></label> -->
+                    <textarea id="review" name="written-review"></textarea>
+                </fieldset>
 
-                <label>
+                <fieldset class="no-border">
                     <legend>Your Name <span class="optional">(Optional)</span></legend>
                     <label><input type="text" id="username" name="your-name"></label>
-                </label>
+                </fieldset>
 
-                <div class="submit-button">
-                    <input type="submit" value="Post Review">
-                </div>
+                <fieldset class="no-border">
+                    <div class="submit-button">
+                        <input type="submit" value="Post Review">
+                    </div>
+                </fieldset>
             </fieldset>
         </form>
         
