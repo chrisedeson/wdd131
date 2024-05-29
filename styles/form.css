@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+fieldset {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: rgb(167, 131, 172);
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.review-form label legend {
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 5px;
+}
+
+.review-form select,
+input[type=date],
+input[type=text],
+input[type=textarea] {
+    padding-left: 10px;
+    width: 100%;
+    max-width: 500px;
+    height: 2.5rem;
+    box-sizing: border-box;
+}
+
+/* stars */
+input[type="radio"] {
+	display: none;
+	position: relative;
+	caret-color: rgba(0, 0, 0, 0);
+}
+
+.stars {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: left;
+}
+
+.stars > label {
+	color: gold;
+	width: 30px;
+	height: 30px;
+	font-size: 2rem;
+	margin-left: 5px;
+	display: flex;
+	align-items: center;
+	caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
+}
+
+.stars > label:hover {
+	color: #000;
+}
+
+.stars > label::before {
+	content: "\2606";
+}
+
+.stars input:checked ~ label::before {
+	content: "\2605";
+}
+
+.features > label {
+    display: block;
+    margin-bottom: .2rem;
+}
+
+input[type=checkbox] {
+    position: relative;
+    top: 5px;
+    margin-right: 15px;
+    
+}
+
+#features-checkbox {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+input[type=textarea] {
+    width: 100%;
+    height: 150px;
+    
+}
+
+.optional {
+    color: rgb(66, 1, 99)
+}
+
+input[type=submit] {
+    width: 100%;
+    height: 3rem;
+    margin-top: 20px;
+    max-width: 500px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-image: linear-gradient(#ccbfd4, #95789e);
+
+}
+
+input[type=submit]:hover {
+    background-image: linear-gradient(#b885d8, #6f2a85);
+}
+
+
+footer {
+    background: darkblue;
+    height: 80px;
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+footer .copyright {
+    padding-top: 15px
+}
+
+footer .date {
+    margin-top: -20px;
+    font-size: smaller;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: gold;
+}
+
+
+/* LARGE SCREEN */
+
+/* 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 64rem) {
+
+    header, main, footer {
+        max-width: 64rem;
+        margin:auto;
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+    
+}
