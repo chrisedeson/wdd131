@@ -1,0 +1,19 @@
+footer {
+    background: rgb(51, 100, 41);
+    height: 80px;
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+footer .copyright {
+    padding-top: 15px
+}
+
+footer .date {
+    margin-top: 20px;
+    font-size: smaller;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: gold;
+}

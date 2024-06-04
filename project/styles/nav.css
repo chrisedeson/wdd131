@@ -1,0 +1,71 @@
+.toggle-button::before {
+    content: "☰";
+    font-size: 25px;
+    color: white;
+    margin-top: -10px;
+}
+
+.toggle-button.open::before {
+    content: "❎";
+}
+
+
+.navbar {
+    background-color: #333;
+    color: white;
+    margin-top: 10px;
+    opacity: 70%;  
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+    text-align: end;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    margin: 2px;
+}
+
+.navbar-links li a:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 4.5rem;
+    right: 2rem;
+    width: 30px;
+    height: 21px;
+    text-decoration: none;
+
+} 
+.toggle-button::before {
+    content: "☰";
+    font-size: 25px;
+    color: white;
+    margin-top: -10px;
+}
+
+.toggle-button.open::before {
+    content: "❎";
+}
+
+
+.navbar-links li a.active {
+    background-color: rgb(13, 78, 153);
+}

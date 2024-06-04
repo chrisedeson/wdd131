@@ -1,0 +1,190 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+
+.logo h1 {
+    font-family: 'Sevillana', serif;
+    font-size: 12vw;
+    color: forestgreen;
+    padding: 30px;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+    text-align: end;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    border: 1px solid white;
+    margin: 2px;
+
+}
+
+.navbar-links li a:hover {
+    background-color: #555;
+}
+
+
+.navbar-links {
+    display: none; /* Hide navbar links by default */
+}
+
+
+.toggle-button {
+    position: absolute;
+    top: 6rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    text-decoration: none;
+
+}
+
+.toggle-button::before {
+    content: "☰";
+    font-size: 25px;
+    color: black;
+    margin-top: 5vh;
+    text-align: center;
+
+}
+
+.toggle-button.open::before {
+    content: "❎";
+}
+
+.navbar-links li a.active {
+    background-color: #04AA6D;
+}
+
+
+.hero {
+    background-image: url(../images/project/eforiro1.jpg); /*the (..) means you're jumping backwards in the file directory i.e from homepage.css to Alison folder */
+    padding: 100px;
+    height: 300px;
+    background-attachment: fixed;   /* Building a Parallax Features in CSS, a way you can scroll on the website with the image not moving in the background, "fixed" meaning you want it to be fixed*/
+    background-position: center;    /* Center the image */
+    background-repeat: no-repeat;   /* You do not want the image to repeat (background-image tends to repeat images */
+    background-size: cover;         /* spreads the image */    
+}
+
+.hero > .top-heading {
+    font-size: 1.3rem;
+    padding: 20px 15px;
+    margin-left: -90px;
+    margin-top: -60px;
+    background-color: #11122b;
+    color: #cbcbcb;
+    width: 280px;
+    border-radius: 2px;
+}
+
+.hero > .bottom-heading {
+    font-family: 'Sansita', serif;
+    background-color: #cea135;
+    color: #11122b;
+    font-size: 1rem;
+    padding: 5px 20px;
+    margin-top: 20px;
+    margin-left: -70px;
+    width: 140px;
+    border-radius: 20px 2px;
+}
+
+.features-section {
+    height: 300px;
+    background-color: mediumseagreen;
+    border-top: 10px solid white;
+    color: #11122b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Ubuntu Condensed", sans-serif;
+    box-shadow: inset 0px -26px 79px -8px rgba(0, 0, 0, 0.58);
+    border-bottom: 5px solid white;
+}
+
+.features-column {
+    text-align: center;
+    padding: 20px;
+}
+
+.features-column h3 {
+    margin: 10px;
+    font-size: 1.5rem;
+    transition: 1s;
+
+}
+
+.features-column img {
+    width: 50%;
+    max-width: 90px;
+}
+
+.features-column h3:hover {
+    letter-spacing: 2px;
+}
+
+.features-column {
+    border-bottom: 5px solid transparent;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.features-column:hover {
+    border-bottom: 5px solid #11122b;
+}
+  
+
+
+/* Helpers */
+.anchor-link {
+    text-decoration: none;
+}
+
+.anchor-link > h1::after {
+    outline: none;
+    font-family: "Font Awesome 5 Free";
+    content: " \f0c1";
+
+}
+

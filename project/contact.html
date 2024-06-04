@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - NaijaTaste</title>
+    <meta name="description" content="Get in touch with NaijaTaste to share your feedback, inquiries, or collaboration opportunities. We'd love to hear from you!">
+
+
+    <!-- <link rel="stylesheet" href="styles/project.css"> -->
+    <link rel="stylesheet" href="styles/project-large.css">
+    <link rel="stylesheet" href="styles/recipes.css">
+    <link rel="stylesheet" href="styles/skewed-header.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    
+    <script src="scripts/project.js" defer></script>
+    <script src="../scripts/getdates.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Sevillana&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" >  
+
+</head>
+<body>
+    <header>
+        <div class="skewed-header">
+            <div class="header-bg" style="background-image: url('images/project/jollof-rice.jpg');"></div>
+    
+            <div class="skewed-header-wrapper">
+                <div class="skewed-header-content">
+                    <div class="heading-wrapper">
+                        <h1>Contact Us</h1>
+                    </div>
+
+                    <nav class="navbar">
+                        <a href="#" class="toggle-button">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </a>
+                        <div class="navbar-links">
+                            <ul>
+                                <li><a class="active" href="project.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                                <li><a href="recipes.html" id="home"><i class="fa fa-fw fa-list"></i> Recipes</a></li>
+                                <li><a href="about.html"><i class="fa fa-history" aria-hidden="true"></i> History</a></li>
+                                <li><a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="form">
+            <div class="form-group">
+                <input type="text" id="fullName" placeholder="Your name">
+                <label for="fullName">Your name</label>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Your email">
+                <label for="email">Your email</label>
+
+            </div>
+
+            <div class="form-group">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea> <!--He removed the columns and rows, says he will deal with it in CSS. Also textarea is not a regular input that's why its not here like the rest above. -->
+                <label for="message">Message</label>
+            </div>
+
+            <div class="spacer10"></div>
+            
+            <div class="center-btn-wrapper">
+                <button type="submit" class="btn">Send Message</button>
+            </div>
+        </div>
+
+        <div class="spacer60"></div>
+
+    </main>
+    <footer>
+        <p class="copyright">
+            <!-- year will be dynamically populated using JavaScript code. Provide a blank <span> tag to do this. -->
+            &copy;<span id="currentyear">2024</span> | E. Christopher Edeson | Nigeria
+        </p>
+        <p class="date"> 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+
+    
+</body>
+</html>
